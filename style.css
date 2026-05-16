@@ -120,10 +120,33 @@ body {
 
 .banner {
   width: 100%;
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  height: 20vh;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.inner-banner {
+  width: 110%;
+  height: 100%;
+  display: inline-block;
+  animation-name: moving;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.inner-banner img {
+  margin: 50px 0px 50px 120px;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .cards {
@@ -761,8 +784,8 @@ body {
 }
 
 .footer-line {
-    height: 2px;
-    margin-top: 20px;
+  height: 2px;
+  margin-top: 20px;
   background-color: rgb(226, 226, 226);
   width: 250px;
 }
@@ -794,23 +817,23 @@ body {
   margin-top: 2vh;
 }
 
-.sub-footer{
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.sub-footer {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.sub-footer h4{
-    font-size: 1vw;
-    font-weight: 400;
-    font-family: 'Times New Roman', Times, serif;
-    color: grey;
+.sub-footer h4 {
+  font-size: 1vw;
+  font-weight: 400;
+  font-family: "Times New Roman", Times, serif;
+  color: grey;
 }
 
-.sub-footer span{
-    color: black;
-    text-decoration: underline;
-    font-weight: 500;
+.sub-footer span {
+  color: black;
+  text-decoration: underline;
+  font-weight: 500;
 }
